@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Fantovex Esports | Play Beyond Limits</title>
 <meta name="description" content="Fantovex Esports — a gaming organization built from nothing. Play Beyond Limits.">
-<link rel="icon" href="assets/logo.png">
+<link rel="icon" href="logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
@@ -16,7 +16,7 @@
 
 <nav id="navbar">
   <a href="#top" class="brand">
-    <img src="assets/logo.png" alt="Fantovex logo" class="brand-logo">
+    <img src="logo.png" alt="Fantovex logo" class="brand-logo">
     <span>FANTO<em>VEX</em></span>
   </a>
   <button id="navToggle" aria-label="Toggle menu">
@@ -24,22 +24,33 @@
   </button>
   <div class="links" id="navLinks">
     <a href="#about">About</a>
+    <a href="#roster">Roster</a>
     <a href="#socials">Socials</a>
     <a href="#contact">Contact</a>
   </div>
 </nav>
 
 <header class="hero" id="top">
-  <div class="hero-bg"></div>
+  <div class="hero-bg" style="background-image:url('banner.png');"></div>
   <div class="hero-content">
-    <img src="assets/logo.png" alt="Fantovex logo" class="hero-logo">
+    <img src="logo.png" alt="Fantovex logo" class="hero-logo">
     <h1>FANTO<em>VEX</em></h1>
     <p class="tagline">PLAY BEYOND LIMITS</p>
     <p class="hero-sub">An esports organization built from nothing — no budget, no shortcuts, no permission asked. Every match earned, one late night at a time.</p>
-    <a href="#contact" class="btn-glow">Join The Movement</a>
+    <div class="hero-btns">
+      <a href="#roster" class="btn-glow">Join The Movement</a>
+      <a href="#socials" class="btn-outline">Follow Us</a>
+    </div>
   </div>
   <div class="scroll-cue">Scroll</div>
 </header>
+
+<section class="stats">
+  <div class="stat"><span>2026</span><small>Est.</small></div>
+  <div class="stat"><span>100%</span><small>Independent</small></div>
+  <div class="stat"><span>0</span><small>Shortcuts Taken</small></div>
+  <div class="stat"><span>∞</span><small>Grind</small></div>
+</section>
 
 <section class="about" id="about">
   <div class="section-head">
@@ -63,43 +74,42 @@
   <p class="founder-line">Founded by <strong>Subhash</strong></p>
 </section>
 
+<section class="roster" id="roster">
+  <div class="section-head">
+    <span class="eyebrow">Join The Roster</span>
+    <h2>The squad is being built. Be part of the first lineup.</h2>
+  </div>
+  <div class="roster-box">
+    <p>Fantovex is actively looking for driven, competitive players to help shape this organization from the ground up. If you're serious about the grind and want in early, reach out.</p>
+    <a href="#contact" class="btn-glow">Apply Now</a>
+  </div>
+</section>
+
 <section class="socials" id="socials">
   <div class="section-head">
     <span class="eyebrow">Follow The Build</span>
     <h2>Where we live online</h2>
   </div>
   <div class="social-grid">
-    <a class="social-card" href="#" target="_blank" rel="noopener">
-      <div class="social-top">
-        <span class="social-icon">🎮</span>
-        <span class="arrow">↗</span>
-      </div>
+    <a class="social-card" href="https://discord.gg/QfNzFAYqS" target="_blank" rel="noopener">
+      <div class="social-top"><span class="social-icon">🎮</span><span class="arrow">↗</span></div>
       <div class="social-name">Discord</div>
       <div class="social-handle">Join the server</div>
     </a>
-    <a class="social-card" href="#" target="_blank" rel="noopener">
-      <div class="social-top">
-        <span class="social-icon">📸</span>
-        <span class="arrow">↗</span>
-      </div>
+    <a class="social-card" href="https://www.instagram.com/fantovex_" target="_blank" rel="noopener">
+      <div class="social-top"><span class="social-icon">📸</span><span class="arrow">↗</span></div>
       <div class="social-name">Instagram</div>
-      <div class="social-handle">@fantovex</div>
+      <div class="social-handle">@fantovex_</div>
     </a>
-    <a class="social-card" href="#" target="_blank" rel="noopener">
-      <div class="social-top">
-        <span class="social-icon">▶️</span>
-        <span class="arrow">↗</span>
-      </div>
+    <a class="social-card" href="https://www.youtube.com/@fantovexHQ" target="_blank" rel="noopener">
+      <div class="social-top"><span class="social-icon">▶️</span><span class="arrow">↗</span></div>
       <div class="social-name">YouTube</div>
-      <div class="social-handle">@fantovex</div>
+      <div class="social-handle">@fantovexHQ</div>
     </a>
-    <a class="social-card" href="#" target="_blank" rel="noopener">
-      <div class="social-top">
-        <span class="social-icon">✕</span>
-        <span class="arrow">↗</span>
-      </div>
-      <div class="social-name">Twitter / X</div>
-      <div class="social-handle">@fantovex</div>
+    <a class="social-card" href="https://t.me/FantovexHQ" target="_blank" rel="noopener">
+      <div class="social-top"><span class="social-icon">✈️</span><span class="arrow">↗</span></div>
+      <div class="social-name">Telegram</div>
+      <div class="social-handle">@FantovexHQ</div>
     </a>
   </div>
 </section>
@@ -109,11 +119,11 @@
     <span class="eyebrow">Get In Touch</span>
     <h2>Sponsors, players,<br>or just curious?</h2>
   </div>
-  <a class="contact-email btn-glow" href="mailto:contact@fantovex.gg">contact@fantovex.gg</a>
+  <a class="contact-email btn-glow" href="mailto:preamer872@gmail.com">preamer872@gmail.com</a>
 </section>
 
 <footer>
-  <img src="assets/logo.png" alt="Fantovex logo" class="footer-logo">
+  <img src="logo.png" alt="Fantovex logo" class="footer-logo">
   <div class="footer-text">
     <div>© 2026 Fantovex Esports</div>
     <div class="footer-sub">Est. 2026 — Play Beyond Limits</div>
