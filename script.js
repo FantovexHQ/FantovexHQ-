@@ -68,3 +68,49 @@ window.addEventListener('resize', () => {
   resizeCanvas();
   createParticles();
 });
+
+// ---- Scroll reveal ----
+const revealTargets = document.querySelectorAll(
+  'section, .glass-card, .social-card, .roster-box, .stats'
+);
+revealTargets.forEach(el => el.classList.add('reveal'));
+
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add('in-view');
+      revealObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.12 });
+
+revealTargets.forEach(el => revealObserver.observe(el));
+
+// ---- Cursor-following glow on glass/social cards ----
+document.querySelectorAll('.glass-card, .social-card').forEach(card => {
+  card.addEventListener('mousemove', (e) => {
+    const rect = card.getBoundingClientRect();
+    card.style.setProperty('--mx', `${e.clientX - rect.left}px`);
+    card.style.setProperty('--my', `${e.clientY - rect.top}px`);
+  });
+});
+
+// ---- Active nav highlighting ----
+const navAnchors = document.querySelectorAll('#navLinks a');
+const trackedSections = Array.from(navAnchors)
+  .map(a => document.querySelector(a.getAttribute('href')))
+  .filter(Boolean);
+
+const navObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    const id = '#' + entry.target.id;
+    const link = document.querySelector(`#navLinks a[href="${id}"]`);
+    if(!link) return;
+    if(entry.isIntersecting){
+      navAnchors.forEach(a => a.classList.remove('active'));
+      link.classList.add('active');
+    }
+  });
+}, { rootMargin: '-45% 0px -45% 0px' });
+
+trackedSections.forEach(sec => navObserver.observe(sec));
