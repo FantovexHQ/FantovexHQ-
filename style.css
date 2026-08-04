@@ -118,17 +118,22 @@ nav .links a.active{color:var(--neon);}
 .hero-watermark{
   position:absolute;
   top:50%; left:50%;
-  transform:translate(-50%,-50%);
+  transform-origin:center center;
   font-family:'Orbitron',sans-serif;
   font-weight:900;
-  font-size:clamp(4rem, 22vw, 13rem);
+  font-size:clamp(2.6rem, 14vw, 9rem);
   color:transparent;
   -webkit-text-stroke:1px rgba(46,230,166,0.08);
-  letter-spacing:.05em;
+  letter-spacing:.02em;
   white-space:nowrap;
   z-index:0;
   pointer-events:none;
   user-select:none;
+  animation:watermarkSpin 70s linear infinite;
+}
+@keyframes watermarkSpin{
+  from{transform:translate(-50%,-50%) rotate(0deg);}
+  to{transform:translate(-50%,-50%) rotate(360deg);}
 }
 .hero-content{
   position:relative;
@@ -445,4 +450,5 @@ footer{
 @media (prefers-reduced-motion: reduce){
   html{scroll-behavior:auto;}
   .hero-logo{animation:none;}
+  .hero-watermark{animation:none;}
 }
