@@ -65,6 +65,24 @@ nav .links a{
 nav .links a:hover{color:var(--neon);}
 nav .links a.active{color:var(--neon);}
 
+.nav-icons{display:flex; gap:.9rem; align-items:center;}
+.nav-icons a{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:34px; height:34px;
+  border:1px solid rgba(46,230,166,0.25);
+  border-radius:50%;
+  text-decoration:none;
+  font-size:.95rem;
+  transition:border-color .2s, transform .2s, box-shadow .2s;
+}
+.nav-icons a:hover{
+  border-color:var(--neon);
+  transform:translateY(-2px);
+  box-shadow:0 0 14px rgba(46,230,166,.35);
+}
+
 #navToggle{
   display:none;
   flex-direction:column;
@@ -91,18 +109,26 @@ nav .links a.active{color:var(--neon);}
 .hero-bg{
   position:absolute;
   inset:0;
-  background-size:cover;
-  background-position:center;
-  opacity:.22;
+  background:
+    radial-gradient(circle at 50% 28%, rgba(46,230,166,0.16), transparent 55%),
+    radial-gradient(circle at 85% 80%, rgba(46,230,166,0.08), transparent 50%),
+    var(--black);
   z-index:0;
 }
-.hero-bg::after{
-  content:"";
+.hero-watermark{
   position:absolute;
-  inset:0;
-  background:
-    radial-gradient(circle at 50% 30%, rgba(5,5,5,0.55), rgba(5,5,5,0.92) 70%),
-    linear-gradient(to bottom, rgba(5,5,5,0.4), var(--black) 90%);
+  top:50%; left:50%;
+  transform:translate(-50%,-50%);
+  font-family:'Orbitron',sans-serif;
+  font-weight:900;
+  font-size:clamp(4rem, 22vw, 13rem);
+  color:transparent;
+  -webkit-text-stroke:1px rgba(46,230,166,0.08);
+  letter-spacing:.05em;
+  white-space:nowrap;
+  z-index:0;
+  pointer-events:none;
+  user-select:none;
 }
 .hero-content{
   position:relative;
@@ -111,20 +137,33 @@ nav .links a.active{color:var(--neon);}
   flex-direction:column;
   align-items:center;
 }
-.hero-logo{
-  width:110px; height:110px;
-  object-fit:contain;
-  margin-bottom:1.6rem;
-  filter:drop-shadow(0 0 22px rgba(46,230,166,.45));
-  animation:floatLogo 5s ease-in-out infinite, heroIn .8s ease both;
+.logo-ring{
+  position:relative;
+  width:150px; height:150px;
+  border-radius:50%;
+  border:2px solid rgba(46,230,166,0.55);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin-bottom:2rem;
+  box-shadow:0 0 40px rgba(46,230,166,.28), inset 0 0 30px rgba(46,230,166,.1);
+  animation:heroIn .8s ease both, ringPulse 3.5s ease-in-out infinite;
 }
-@keyframes floatLogo{0%,100%{transform:translateY(0);} 50%{transform:translateY(-10px);}}
+@keyframes ringPulse{
+  0%,100%{box-shadow:0 0 40px rgba(46,230,166,.28), inset 0 0 30px rgba(46,230,166,.1);}
+  50%{box-shadow:0 0 60px rgba(46,230,166,.45), inset 0 0 40px rgba(46,230,166,.18);}
+}
+.hero-logo{
+  width:74px; height:74px;
+  object-fit:contain;
+  filter:drop-shadow(0 0 14px rgba(46,230,166,.5));
+}
 @keyframes heroIn{
   from{opacity:0; transform:translateY(18px);}
   to{opacity:1; transform:translateY(0);}
 }
-.hero h1{
-  font-size:clamp(2.6rem, 10vw, 6rem);
+.hero-title{
+  font-size:clamp(2rem, 7vw, 4rem);
   font-weight:900;
   letter-spacing:.03em;
   color:var(--white);
@@ -132,7 +171,6 @@ nav .links a.active{color:var(--neon);}
   animation:heroIn .8s ease .12s both;
 }
 .tagline{
-  margin-top:.9rem;
   font-size:clamp(.85rem, 2vw, 1.1rem);
   letter-spacing:.4em;
   color:var(--neon);
@@ -226,6 +264,15 @@ nav .links a.active{color:var(--neon);}
   text-transform:uppercase;
   color:var(--grey);
 }
+
+/* COMING SOON (Games / Tournaments) */
+.soon-box{
+  background:var(--glass);
+  border:1px dashed var(--glass-border);
+  border-radius:16px;
+  padding:2.2rem;
+}
+.soon-box p{color:var(--grey); max-width:600px;}
 
 /* SCROLL REVEAL */
 .reveal{
@@ -360,6 +407,7 @@ footer{
 
 /* MOBILE NAV */
 @media(max-width:768px){
+  .nav-icons{display:none;}
   #navToggle{display:flex;}
   nav .links{
     position:fixed;
@@ -389,6 +437,7 @@ footer{
   nav .links.open a:nth-child(2){transition-delay:.14s;}
   nav .links.open a:nth-child(3){transition-delay:.2s;}
   nav .links.open a:nth-child(4){transition-delay:.26s;}
+  nav .links.open a:nth-child(5){transition-delay:.32s;}
   .stats{grid-template-columns:repeat(2,1fr);}
   .stat{border-bottom:1px solid rgba(255,255,255,0.08);}
 }
