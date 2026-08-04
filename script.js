@@ -71,7 +71,7 @@ window.addEventListener('resize', () => {
 
 // ---- Scroll reveal ----
 const revealTargets = document.querySelectorAll(
-  'section, .glass-card, .social-card, .roster-box, .stats'
+  'section, .glass-card, .social-card, .roster-box, .soon-box, .stats'
 );
 revealTargets.forEach(el => el.classList.add('reveal'));
 
