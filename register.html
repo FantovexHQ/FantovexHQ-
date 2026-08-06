@@ -167,6 +167,32 @@ form h2{
   letter-spacing:.05em;
   margin-bottom:1rem;
 }
+.payment-box{
+  border:1px solid var(--glass-border);
+  background:var(--glass);
+  border-radius:12px;
+  padding:1.4rem;
+  margin-bottom:1.2rem;
+  text-align:center;
+}
+.payment-box .player-title{margin-bottom:.6rem;}
+.pay-text{color:var(--grey); font-size:.88rem; margin-bottom:1rem;}
+.qr-img{
+  width:160px;
+  height:160px;
+  object-fit:contain;
+  border-radius:10px;
+  background:#fff;
+  padding:8px;
+}
+.pay-number{
+  margin-top:.8rem;
+  font-family:'Orbitron',sans-serif;
+  font-size:1.1rem;
+  letter-spacing:.08em;
+  color:var(--neon);
+  font-weight:700;
+}
 .two-col{display:grid; grid-template-columns:1fr 1fr; gap:1rem;}
 @media(max-width:480px){.two-col{grid-template-columns:1fr;}}
 
@@ -231,7 +257,7 @@ footer{
 <section class="hero">
   <div class="eyebrow">Play Beyond Limits</div>
   <h1>FREE FIRE<br><span>SQUAD TOURNAMENT</span></h1>
-  <p>Fight together. Win together. Register your squad below to lock in your spot.</p>
+  <p>Gather your squad. Prove your skills. Claim victory! Register below to lock in your spot.</p>
 
   <div class="prize-strip">
     <div><div class="place">1st Place</div><div class="amount">₹600</div></div>
@@ -240,15 +266,18 @@ footer{
   </div>
 
   <div class="info-grid">
-    <div class="info-card"><div class="label">Entry Fee</div><div class="value">₹80 / Squad</div></div>
-    <div class="info-card"><div class="label">Date</div><div class="value">5 August</div></div>
+    <div class="info-card"><div class="label">Entry Fee</div><div class="value">₹50 / Player</div></div>
+    <div class="info-card"><div class="label">Date</div><div class="value">9 August (Sun)</div></div>
     <div class="info-card"><div class="label">Time</div><div class="value">Check Discord</div></div>
-    <div class="info-card"><div class="label">Mode</div><div class="value">Squad (4+1)</div></div>
-    <div class="info-card"><div class="label">Map</div><div class="value">Bermuda</div></div>
+    <div class="info-card"><div class="label">Mode</div><div class="value">Squad</div></div>
+    <div class="info-card"><div class="label">Server</div><div class="value">India</div></div>
   </div>
 
   <div class="bonus-note">
-    <strong>Bonus Reward:</strong> ₹10 per kill if total collection exceeds expectations. Conditions apply — details announced before the tournament in Discord.
+    <strong>Bonus Rewards:</strong> If registrations exceed expectations, we may increase the prize pool and announce additional rewards like ₹10 per confirmed kill before the tournament!
+  </div>
+  <div class="bonus-note">
+    <strong>Room ID & Password</strong> will be announced only on our official Discord & Telegram.
   </div>
 </section>
 
@@ -266,7 +295,8 @@ footer{
       <div class="field"><label>In-Game Name</label><input type="text" name="Captain IGN" required></div>
       <div class="field"><label>UID</label><input type="text" name="Captain UID" required></div>
     </div>
-    <div class="field"><label>WhatsApp Number</label><input type="tel" name="Captain WhatsApp" required></div>
+    <div class="field"><label>WhatsApp Number (Optional)</label><input type="tel" name="Captain WhatsApp"></div>
+    <div class="field"><label>Telegram Username</label><input type="text" name="Captain Telegram" required></div>
   </div>
 
   <div class="player-block">
@@ -306,13 +336,20 @@ footer{
     <input type="text" id="discord" name="Discord Username" required>
   </div>
 
+  <div class="payment-box">
+    <div class="player-title">Payment</div>
+    <p class="pay-text">Pay ₹50 per player (total for your squad) via PhonePe to the number below, then upload your screenshot.</p>
+    <img src="payment-qr.jpg" alt="PhonePe payment QR code" class="qr-img">
+    <div class="pay-number">9508658469</div>
+  </div>
+
   <div class="field">
-    <label for="payProof">Payment Proof Screenshot (Entry Fee ₹80)</label>
+    <label for="payProof">Payment Proof Screenshot (Entry Fee ₹50/Player)</label>
     <input type="file" id="payProof" name="Payment Screenshot" accept="image/*" required>
   </div>
 
   <button type="submit" class="submit-btn" id="submitBtn">Register Now</button>
-  <p class="form-note">Pay the ₹80 entry fee via the UPI ID shared in our Discord, then attach the screenshot above.</p>
+  <p class="form-note">Pay via PhonePe to 9508658469, then attach the screenshot above.</p>
 </form>
 
 <div class="success-box" id="successBox">
