@@ -11,6 +11,49 @@ navLinks.querySelectorAll('a').forEach(link => {
   link.addEventListener('click', () => navLinks.classList.remove('open'));
 });
 
+// ---- Preloader ----
+const preloader = document.getElementById('preloader');
+const preloaderFill = document.getElementById('preloaderFill');
+
+window.addEventListener('load', () => {
+  requestAnimationFrame(() => {
+    preloaderFill.style.width = '100%';
+  });
+  setTimeout(() => {
+    preloader.classList.add('hide');
+  }, 1700);
+});
+
+// safety fallback in case 'load' fires very late on slow connections
+setTimeout(() => {
+  if(preloader && !preloader.classList.contains('hide')){
+    preloaderFill.style.width = '100%';
+    setTimeout(() => preloader.classList.add('hide'), 200);
+  }
+}, 4000);
+
+// ---- Button particle burst on click ----
+document.querySelectorAll('.btn-glow').forEach(btn => {
+  btn.addEventListener('click', (e) => {
+    const rect = btn.getBoundingClientRect();
+    const cx = rect.left + rect.width / 2;
+    const cy = rect.top + rect.height / 2;
+    const count = 10;
+    for(let i = 0; i < count; i++){
+      const p = document.createElement('span');
+      p.className = 'burst-particle';
+      const angle = (Math.PI * 2 * i) / count;
+      const dist = 40 + Math.random() * 20;
+      p.style.setProperty('--bx', `${Math.cos(angle) * dist}px`);
+      p.style.setProperty('--by', `${Math.sin(angle) * dist}px`);
+      p.style.left = `${cx}px`;
+      p.style.top = `${cy}px`;
+      document.body.appendChild(p);
+      setTimeout(() => p.remove(), 650);
+    }
+  });
+});
+
 // ---- Lightweight particle background (kept minimal for low-end devices) ----
 const canvas = document.getElementById('particles');
 const ctx = canvas.getContext('2d');
