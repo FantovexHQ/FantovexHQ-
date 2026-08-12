@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="theme-color" content="#060907">
+<meta name="description" content="Fantovex Esports — Upcoming competitive tournaments.">
+
+<title>Fantovex — Tournaments</title>
+
+<style>
+:root{
+  --bg:#060907;
+  --panel:#0b110e;
+  --panel2:#0e1713;
+  --emerald:#16f2a3;
+  --emerald2:#0bc982;
+  --text:#eafff6;
+  --mist:#7fa89a;
+  --muted:#527065;
+  --line:rgba(22,242,163,.16);
+}
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  background:
+    radial-gradient(circle at 50% 0%,rgba(22,242,163,.08),transparent 35%),
+    var(--bg);
+  color:var(--text);
+  font-family:Arial,sans-serif;
+  min-height:100vh;
+}
+
+/* HEADER */
+
+header{
+  position:sticky;
+  top:0;
+  z-index:50;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:16px 28px;
+  background:rgba(6,9,7,.88);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--line);
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.brand-mark{
+  width:34px;
+  height:34px;
+  border-radius:50%;
+  border:1px solid var(--emerald);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow:0 0 18px rgba(22,242,163,.35);
+  overflow:hidden;
+}
+
+.brand-mark span{
+  font-family:Georgia,serif;
+  font-size:14px;
+  font-weight:bold;
+  color:var(--emerald);
+}
+
+.brand-name{
+  font-family:Georgia,serif;
+  font-size:16px;
+  letter-spacing:.25em;
+}
+
+.back-link{
+  color:var(--mist);
+  text-decoration:none;
+  font-size:12px;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  transition:.25s;
+}
+
+.back-link:hover{
+  color:var(--emerald);
+}
+
+/* MAIN */
+
+main{
+  max-width:960px;
+  margin:auto;
+  padding:70px 22px 100px;
+}
+
+.hero{
+  text-align:center;
+  margin-bottom:50px;
+}
+
+.eyebrow{
+  color:var(--emerald);
+  font-size:11px;
+  letter-spacing:.32em;
+  text-transform:uppercase;
+  margin-bottom:15px;
+}
+
+h1{
+  font-family:Georgia,serif;
+  font-weight:400;
+  font-size:clamp(32px,7vw,52px);
+  letter-spacing:.03em;
+  margin-bottom:18px;
+}
+
+.hero p{
+  max-width:650px;
+  margin:auto;
+  color:var(--mist);
+  font-size:15px;
+  line-height:1.8;
+}
+
+/* TOURNAMENT GRID */
+
+.tournaments{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+}
+
+.card{
+  position:relative;
+  background:
+    linear-gradient(145deg,rgba(22,242,163,.045),transparent 45%),
+    var(--panel);
+  border:1px solid var(--line);
+  border-radius:16px;
+  padding:28px 22px;
+  overflow:hidden;
+  transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease;
+}
+
+.card:hover{
+  transform:translateY(-5px);
+  border-color:rgba(22,242,163,.42);
+  box-shadow:0 18px 45px rgba(0,0,0,.35);
+}
+
+.card::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  height:2px;
+  background:linear-gradient(90deg,transparent,var(--emerald),transparent);
+  opacity:.65;
+}
+
+.format{
+  display:inline-block;
+  padding:6px 10px;
+  border:1px solid rgba(22,242,163,.2);
+  border-radius:50px;
+  color:var(--emerald);
+  font-size:10px;
+  letter-spacing:.2em;
+  text-transform:uppercase;
+  margin-bottom:20px;
+}
+
+.card h2{
+  font-family:Georgia,serif;
+  font-weight:400;
+  font-size:25px;
+  line-height:1.2;
+  margin-bottom:9px;
+}
+
+.card .description{
+  color:var(--mist);
+  font-size:13px;
+  line-height:1.6;
+  min-height:42px;
+}
+
+.date{
+  margin-top:22px;
+  color:#b9d7cc;
+  font-size:13px;
+}
+
+.date strong{
+  display:block;
+  color:var(--text);
+  font-size:16px;
+  margin-top:5px;
+}
+
+.stats{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+  margin-top:22px;
+}
+
+.stat{
+  background:var(--panel2);
+  border:1px solid rgba(255,255,255,.045);
+  border-radius:10px;
+  padding:13px 10px;
+}
+
+.stat span{
+  display:block;
+  color:var(--muted);
+  font-size:10px;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  margin-bottom:6px;
+}
+
+.stat strong{
+  color:var(--emerald);
+  font-size:16px;
+}
+
+.status{
+  margin-top:20px;
+  padding:10px;
+  text-align:center;
+  border-radius:8px;
+  background:rgba(22,242,163,.055);
+  color:var(--mist);
+  font-size:10px;
+  letter-spacing:.13em;
+  text-transform:uppercase;
+}
+
+/* BOTTOM MESSAGE */
+
+.notice{
+  margin-top:38px;
+  padding:24px;
+  text-align:center;
+  border:1px solid var(--line);
+  border-radius:14px;
+  background:rgba(22,242,163,.025);
+}
+
+.notice h3{
+  font-family:Georgia,serif;
+  font-size:21px;
+  font-weight:400;
+  margin-bottom:9px;
+}
+
+.notice p{
+  max-width:620px;
+  margin:auto;
+  color:var(--mist);
+  font-size:13px;
+  line-height:1.7;
+}
+
+/* MOBILE */
+
+@media(max-width:760px){
+
+  header{
+    padding:14px 18px;
+  }
+
+  .brand-name{
+    font-size:14px;
+  }
+
+  main{
+    padding:55px 16px 80px;
+  }
+
+  .hero{
+    margin-bottom:35px;
+  }
+
+  .hero p{
+    font-size:14px;
+  }
+
+  .tournaments{
+    grid-template-columns:1fr;
+    gap:15px;
+  }
+
+  .card{
+    padding:25px 20px;
+  }
+
+  .card h2{
+    font-size:24px;
+  }
+}
+
+@media(min-width:761px){
+  .card:nth-child(2){
+    transform:translateY(12px);
+  }
+
+  .card:nth-child(2):hover{
+    transform:translateY(7px);
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+  <div class="brand">
+    <div class="brand-mark">
+      <span>F</span>
+    </div>
+
+    <div class="brand-name">
+      FANTOVEX
+    </div>
+  </div>
+
+  <a class="back-link" href="index.html">
+    ← Back
+  </a>
+
+</header>
+
+
+<main>
+
+  <section class="hero">
+
+    <div class="eyebrow">
+      Competitive Arena
+    </div>
+
+    <h1>
+      Upcoming Tournaments
+    </h1>
+
+    <p>
+      Choose your format, prepare your squad and get ready
+      for the next Fantovex competitive event.
+      New tournaments and formats will be announced here.
+    </p>
+
+  </section>
+
+
+  <section class="tournaments">
+
+
+    <!-- SOLO -->
+
+    <article class="card">
+
+      <span class="format">
+        Solo
+      </span>
+
+      <h2>
+        Fantovex Solo Clash
+      </h2>
+
+      <p class="description">
+        One player. One fight. Prove your individual skill
+        against the competition.
+      </p>
+
+      <div class="date">
+        Tournament Date
+        <strong>
+          16 August 2026
+        </strong>
+      </div>
+
+      <div class="stats">
+
+        <div class="stat">
+          <span>
+            Entry
+          </span>
+
+          <strong>
+            ₹50 / Player
+          </strong>
+        </div>
+
+        <div class="stat">
+          <span>
+            Prize Pool
+          </span>
+
+          <strong>
+            ₹1,000
+          </strong>
+        </div>
+
+      </div>
+
+      <div class="status">
+        Details & Registration
+        Coming Soon
+      </div>
+
+    </article>
+
+
+    <!-- DUO -->
+
+    <article class="card">
+
+      <span class="format">
+        Duo
+      </span>
+
+      <h2>
+        Fantovex Duo Rush
+      </h2>
+
+      <p class="description">
+        Team up with one teammate and take on the arena
+        together.
+      </p>
+
+      <div class="date">
+        Tournament Date
+        <strong>
+          23 August 2026
+        </strong>
+      </div>
+
+      <div class="stats">
+
+        <div class="stat">
+          <span>
+            Entry
+          </span>
+
+          <strong>
+            ₹50 / Player
+          </strong>
+        </div>
+
+        <div class="stat">
+          <span>
+            Prize Pool
+          </span>
+
+          <strong>
+            ₹1,000
+          </strong>
+        </div>
+
+      </div>
+
+      <div class="status">
+        Details & Registration
+        Coming Soon
+      </div>
+
+    </article>
+
+
+    <!-- SQUAD -->
+
+    <article class="card">
+
+      <span class="format">
+        Squad
+      </span>
+
+      <h2>
+        Fantovex Squad Wars
+      </h2>
+
+      <p class="description">
+        Build your squad, coordinate your strategy and
+        compete as a team.
+      </p>
+
+      <div class="date">
+        Tournament Date
+        <strong>
+          30 August 2026
+        </strong>
+      </div>
+
+      <div class="stats">
+
+        <div class="stat">
+          <span>
+            Entry
+          </span>
+
+          <strong>
+            ₹50 / Player
+          </strong>
+        </div>
+
+        <div class="stat">
+          <span>
+            Prize Pool
+          </span>
+
+          <strong>
+            ₹1,000
+          </strong>
+        </div>
+
+      </div>
+
+      <div class="status">
+        Details & Registration
+        Coming Soon
+      </div>
+
+    </article>
+
+  </section>
+
+
+  <section class="notice">
+
+    <h3>
+      More Than A Match
+    </h3>
+
+    <p>
+      Fantovex is building a competitive gaming platform
+      focused on fair competition, strong communities and
+      players who are ready to play beyond limits.
+    </p>
+
+  </section>
+
+</main>
+
+</body>
+  </html>
