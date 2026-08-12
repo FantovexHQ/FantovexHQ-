@@ -1,173 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Fantovex Esports | Play Beyond Limits</title>
-<meta name="description" content="Fantovex Esports — a gaming organization built from nothing. Play Beyond Limits.">
-<link rel="icon" href="logo.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#060907">
+  <meta name="description" content="Fantovex Esports — Play Beyond Limits. Tournaments, community and competitive gaming.">
+  <title>Fantovex Esports — Play Beyond Limits</title>
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
+  <div class="noise"></div>
 
-<div id="preloader">
-  <div class="preloader-ring">
-    <img src="logo.png" alt="Fantovex" class="preloader-logo">
-  </div>
-  <div class="preloader-text">FANTO<em>VEX</em></div>
-  <div class="preloader-bar"><div class="preloader-fill" id="preloaderFill"></div></div>
-</div>
-
-<canvas id="particles"></canvas>
-
-<nav id="navbar">
-  <a href="#top" class="brand">
-    <img src="logo.png" alt="Fantovex logo" class="brand-logo">
-    <span>FANTO<em>VEX</em></span>
-  </a>
-  <button id="navToggle" aria-label="Toggle menu">
-    <span></span><span></span><span></span>
-  </button>
-  <div class="links" id="navLinks">
-    <a href="#top">Home</a>
-    <a href="#games">Games</a>
-    <a href="#tournaments">Tournaments</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
-  </div>
-  <div class="nav-icons">
-    <a href="https://discord.gg/QfNzFAYqS" target="_blank" rel="noopener" aria-label="Discord">🎮</a>
-    <a href="https://t.me/FantovexHQ" target="_blank" rel="noopener" aria-label="Telegram">✈️</a>
-    <a href="https://www.instagram.com/fantovex_" target="_blank" rel="noopener" aria-label="Instagram">📸</a>
-    <a href="https://www.youtube.com/@fantovexHQ" target="_blank" rel="noopener" aria-label="YouTube">▶️</a>
-  </div>
-</nav>
-
-<header class="hero" id="top">
-  <div class="hero-bg"></div>
-  <div class="hero-watermark">FANTOVEX</div>
-  <div class="hero-content">
-    <div class="logo-ring">
-      <img src="logo.png" alt="Fantovex logo" class="hero-logo">
-    </div>
-    <p class="tagline">PLAY BEYOND LIMITS</p>
-    <h1 class="hero-title glitch" data-text="FANTOVEX ESPORTS">FANTO<em>VEX</em> ESPORTS</h1>
-    <p class="hero-sub">An esports organization built from nothing — no budget, no shortcuts, no permission asked. Every match earned, one late night at a time.</p>
-    <div class="hero-btns">
-      <a href="register.html" class="btn-glow">Register Now</a>
-      <a href="https://discord.gg/QfNzFAYqS" target="_blank" rel="noopener" class="btn-outline">Join Discord</a>
-    </div>
-  </div>
-  <div class="scroll-cue">Scroll</div>
-</header>
-
-<section class="stats">
-  <div class="stat"><span>2026</span><small>Est.</small></div>
-  <div class="stat"><span>100%</span><small>Independent</small></div>
-  <div class="stat"><span>0</span><small>Shortcuts Taken</small></div>
-  <div class="stat"><span>∞</span><small>Grind</small></div>
-</section>
-
-<section class="coming-soon" id="games">
-  <div class="section-head">
-    <span class="eyebrow">Our Games</span>
-    <h2>Lineup being finalized</h2>
-  </div>
-  <div class="soon-box">
-    <p>We're locking in which titles Fantovex will compete in first. Follow our Discord or Telegram to be first to know when rosters open.</p>
-  </div>
-</section>
-
-<section class="coming-soon" id="tournaments">
-  <div class="section-head">
-    <span class="eyebrow">Tournaments</span>
-    <h2>First event, coming soon</h2>
-  </div>
-  <div class="soon-box">
-    <p>No tournaments announced yet — we're building the foundation first. When we run our first event, it'll be announced here and across our socials.</p>
-  </div>
-</section>
-
-<section class="about" id="about">
-  <div class="section-head">
-    <span class="eyebrow">The Mission</span>
-    <h2>Forged from nothing.<br>Built for something.</h2>
-  </div>
-  <div class="glass-grid">
-    <div class="glass-card">
-      <h3>01 · Origin</h3>
-      <p>No budget, no equipment, no connections. Fantovex started with a single refusal to quit — and it hasn't stopped since.</p>
-    </div>
-    <div class="glass-card">
-      <h3>02 · Purpose</h3>
-      <p>A home for overlooked, under-resourced competitors who are dead serious about getting better every single day.</p>
-    </div>
-    <div class="glass-card">
-      <h3>03 · Direction</h3>
-      <p>Early, and honest about it. This is the foundation being poured in public — brick by brick, match by match.</p>
-    </div>
-  </div>
-  <p class="founder-line">Founded by <strong>Subhash</strong></p>
-</section>
-
-<section class="roster" id="roster">
-  <div class="section-head">
-    <span class="eyebrow">Join The Roster</span>
-    <h2>The squad is being built. Be part of the first lineup.</h2>
-  </div>
-  <div class="roster-box">
-    <p>Fantovex is actively looking for driven, competitive players to help shape this organization from the ground up. If you're serious about the grind and want in early, reach out.</p>
-    <a href="register.html" class="btn-glow">Apply Now</a>
-  </div>
-</section>
-
-<section class="socials" id="socials">
-  <div class="section-head">
-    <span class="eyebrow">Follow The Build</span>
-    <h2>Where we live online</h2>
-  </div>
-  <div class="social-grid">
-    <a class="social-card" href="https://discord.gg/QfNzFAYqS" target="_blank" rel="noopener">
-      <div class="social-top"><span class="social-icon">🎮</span><span class="arrow">↗</span></div>
-      <div class="social-name">Discord</div>
-      <div class="social-handle">Join the server</div>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Fantovex home">
+      <span class="brand-logo"><img src="assets/logo.svg" alt="Fantovex"></span>
+      <span class="brand-name">FANTOVEX</span>
     </a>
-    <a class="social-card" href="https://www.instagram.com/fantovex_" target="_blank" rel="noopener">
-      <div class="social-top"><span class="social-icon">📸</span><span class="arrow">↗</span></div>
-      <div class="social-name">Instagram</div>
-      <div class="social-handle">@fantovex_</div>
-    </a>
-    <a class="social-card" href="https://www.youtube.com/@fantovexHQ" target="_blank" rel="noopener">
-      <div class="social-top"><span class="social-icon">▶️</span><span class="arrow">↗</span></div>
-      <div class="social-name">YouTube</div>
-      <div class="social-handle">@fantovexHQ</div>
-    </a>
-    <a class="social-card" href="https://t.me/FantovexHQ" target="_blank" rel="noopener">
-      <div class="social-top"><span class="social-icon">✈️</span><span class="arrow">↗</span></div>
-      <div class="social-name">Telegram</div>
-      <div class="social-handle">@FantovexHQ</div>
-    </a>
-  </div>
-</section>
 
-<section class="contact" id="contact">
-  <div class="section-head">
-    <span class="eyebrow">Get In Touch</span>
-    <h2>Sponsors, players,<br>or just curious?</h2>
-  </div>
-  <a class="contact-email btn-glow" href="mailto:preamer872@gmail.com">preamer872@gmail.com</a>
-</section>
+    <nav class="nav" id="nav">
+      <a class="active" href="index.html">Home</a>
+      <a href="#games">Games</a>
+      <a href="#about">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
 
-<footer>
-  <img src="logo.png" alt="Fantovex logo" class="footer-logo">
-  <div class="footer-text">
-    <div>© 2026 Fantovex Esports</div>
-    <div class="footer-sub">Est. 2026 — Play Beyond Limits</div>
-  </div>
-</footer>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+  </header>
 
-<script src="script.js"></script>
+  <main>
+    <section class="hero">
+      <div class="hero-orb orb-a"></div>
+      <div class="hero-orb orb-b"></div>
+
+      <div class="hero-content">
+        <p class="eyebrow">FANTOVEX ESPORTS · 2026</p>
+        <h1>PLAY<br><span>BEYOND LIMITS.</span></h1>
+        <p class="hero-copy">
+          A competitive esports brand built for players who want to compete,
+          connect and create something bigger than the game.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#games">Explore Games <span>→</span></a>
+          <a class="btn btn-ghost" href="contact.html">Join Community</a>
+        </div>
+      </div>
+
+      <div class="hero-mark" aria-hidden="true">
+        <img src="assets/logo.svg" alt="">
+        <div class="hero-ring ring-one"></div>
+        <div class="hero-ring ring-two"></div>
+      </div>
+
+      <div class="scroll-hint"><span></span> SCROLL TO EXPLORE</div>
+    </section>
+
+    <section class="ticker" aria-label="Fantovex motto">
+      <div>COMPETE <b>•</b> CONNECT <b>•</b> CONQUER <b>•</b> PLAY BEYOND LIMITS <b>•</b> FANTOVEX</div>
+    </section>
+
+    <section class="section" id="games">
+      <div class="section-heading">
+        <p class="eyebrow">01 / THE ARENA</p>
+        <h2>Choose your <span>battlefield.</span></h2>
+        <p>Competitive titles, community events and tournament experiences designed around the players.</p>
+      </div>
+
+      <div class="game-grid">
+        <article class="game-card">
+          <div class="game-number">01</div>
+          <div class="game-symbol">FF</div>
+          <div>
+            <p class="game-label">BATTLE ROYALE</p>
+            <h3>FREE FIRE</h3>
+            <p>Fast matches. Smart rotations. High-pressure finishes.</p>
+          </div>
+          <a href="contact.html" class="card-link">ENTER COMMUNITY →</a>
+        </article>
+
+        <article class="game-card">
+          <div class="game-number">02</div>
+          <div class="game-symbol">BG</div>
+          <div>
+            <p class="game-label">BATTLE ROYALE</p>
+            <h3>BGMI</h3>
+            <p>Squad tactics, clutch moments and serious competition.</p>
+          </div>
+          <a href="contact.html" class="card-link">ENTER COMMUNITY →</a>
+        </article>
+
+        <article class="game-card">
+          <div class="game-number">03</div>
+          <div class="game-symbol">COD</div>
+          <div>
+            <p class="game-label">FPS</p>
+            <h3>CALL OF DUTY</h3>
+            <p>Precision, speed and relentless competitive energy.</p>
+          </div>
+          <a href="contact.html" class="card-link">ENTER COMMUNITY →</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section split" id="about">
+      <div class="section-heading">
+        <p class="eyebrow">02 / THE VISION</p>
+        <h2>Built from a <span>dream.</span></h2>
+      </div>
+
+      <div class="story">
+        <p>
+          Fantovex started with a simple idea: gaming can become more than a match.
+          It can become a community, a stage and a company that grows with its players.
+        </p>
+        <p>
+          We are building an esports identity around competition, creativity and
+          ambition — one tournament, one player and one breakthrough at a time.
+        </p>
+        <div class="quote">“The next level is not a destination. It is a decision.”</div>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div class="cta-inner">
+        <p class="eyebrow">03 / READY?</p>
+        <h2>YOUR NEXT MATCH<br><span>STARTS HERE.</span></h2>
+        <a class="btn btn-primary" href="contact.html">CONNECT WITH FANTOVEX <span>→</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div>
+      <div class="footer-brand"><img src="assets/logo.svg" alt=""> FANTOVEX</div>
+      <p>PLAY BEYOND LIMITS.</p>
+    </div>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="#games">Games</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <p class="copyright">© 2026 Fantovex Esports. All rights reserved.</p>
+  </footer>
+
+  <script src="assets/app.js"></script>
 </body>
 </html>
