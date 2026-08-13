@@ -2,391 +2,1359 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Free Fire Squad Tournament | Fantovex Esports</title>
-<meta name="description" content="Register your squad for the Fantovex Free Fire Squad Tournament. Prize pool ₹1000. Play Beyond Limits.">
-<link rel="icon" href="logo.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<style>
-:root{
-  --black:#050505;
-  --glass:rgba(255,255,255,0.04);
-  --glass-border:rgba(46,230,166,0.25);
-  --neon:#2ee6a6;
-  --white:#f2f5f3;
-  --grey:#9aa39d;
-}
-*{margin:0;padding:0;box-sizing:border-box;}
-body{
-  background:var(--black);
-  color:var(--white);
-  font-family:'Inter',sans-serif;
-  line-height:1.6;
-}
-h1,h2,h3,.eyebrow,.tagline,.brand span{font-family:'Orbitron',sans-serif;}
-a{color:var(--neon);}
 
-nav{
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<meta name="theme-color" content="#060907">
+
+<meta name="description"
+      content="Fantovex Esports Tournament Registration — Play Beyond Limits.">
+
+<title>Fantovex — Tournament Registration</title>
+
+<style>
+
+:root{
+  --bg:#060907;
+  --panel:#0b110e;
+  --panel2:#0e1713;
+
+  --emerald:#16f2a3;
+  --emerald2:#0bc982;
+
+  --text:#eafff6;
+  --mist:#7fa89a;
+  --muted:#527065;
+
+  --line:rgba(22,242,163,.16);
+  --danger:#ff6b6b;
+}
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  min-height:100vh;
+
+  background:
+    radial-gradient(
+      circle at 50% 0%,
+      rgba(22,242,163,.09),
+      transparent 38%
+    ),
+    var(--bg);
+
+  color:var(--text);
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header{
+  position:sticky;
+  top:0;
+  z-index:100;
+
   display:flex;
   align-items:center;
-  gap:.6rem;
-  padding:16px 6vw;
-  border-bottom:1px solid rgba(46,230,166,0.12);
+  justify-content:space-between;
+
+  padding:15px 28px;
+
+  background:rgba(6,9,7,.88);
+
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
+
+  border-bottom:1px solid var(--line);
 }
-nav img{height:32px; width:32px; object-fit:contain;}
-nav span{font-size:1rem; font-weight:700; letter-spacing:.1em;}
-nav span em{font-style:normal; color:var(--neon);}
-nav .back{
-  margin-left:auto;
-  font-size:.8rem;
-  letter-spacing:.08em;
-  text-transform:uppercase;
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap:12px;
+
   text-decoration:none;
-  color:var(--grey);
+  color:var(--text);
 }
+
+.brand-mark{
+  width:36px;
+  height:36px;
+
+  border:1px solid var(--emerald);
+  border-radius:50%;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  box-shadow:
+    0 0 18px rgba(22,242,163,.32);
+
+  overflow:hidden;
+}
+
+.brand-mark span{
+  color:var(--emerald);
+
+  font-family:Georgia,serif;
+
+  font-size:15px;
+  font-weight:bold;
+}
+
+.brand-name{
+  font-family:Georgia,serif;
+
+  font-size:16px;
+
+  letter-spacing:.25em;
+}
+
+.back-link{
+  color:var(--mist);
+
+  text-decoration:none;
+
+  font-size:12px;
+
+  letter-spacing:.1em;
+
+  text-transform:uppercase;
+
+  transition:.25s;
+}
+
+.back-link:hover{
+  color:var(--emerald);
+}
+
+
+/* =========================
+   MAIN
+========================= */
+
+main{
+  width:100%;
+  max-width:850px;
+
+  margin:0 auto;
+
+  padding:
+    65px 20px
+    100px;
+}
+
+
+/* =========================
+   HERO
+========================= */
 
 .hero{
   text-align:center;
-  padding:8vh 6vw 5vh;
-  background:radial-gradient(circle at 50% 0%, rgba(46,230,166,0.14), transparent 60%);
+
+  margin-bottom:42px;
 }
+
 .eyebrow{
-  color:var(--neon);
-  font-size:.75rem;
-  letter-spacing:.35em;
+  color:var(--emerald);
+
+  font-size:10px;
+
+  letter-spacing:.32em;
+
   text-transform:uppercase;
+
+  margin-bottom:14px;
 }
+
 .hero h1{
-  margin-top:1rem;
-  font-size:clamp(1.9rem, 7vw, 3.2rem);
-  font-weight:900;
-  line-height:1.15;
-}
-.hero h1 span{color:var(--neon);}
-.hero p{margin-top:1rem; color:var(--grey); max-width:520px; margin-left:auto; margin-right:auto;}
+  font-family:Georgia,serif;
 
-.prize-strip{
+  font-weight:400;
+
+  font-size:
+    clamp(32px,7vw,50px);
+
+  letter-spacing:.03em;
+
+  margin-bottom:16px;
+}
+
+.hero p{
+  max-width:650px;
+
+  margin:0 auto;
+
+  color:var(--mist);
+
+  font-size:14px;
+
+  line-height:1.8;
+}
+
+
+/* =========================
+   FORM CONTAINER
+========================= */
+
+.form-shell{
+  position:relative;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(22,242,163,.045),
+      transparent 45%
+    ),
+    var(--panel);
+
+  border:1px solid var(--line);
+
+  border-radius:18px;
+
+  padding:32px;
+
+  box-shadow:
+    0 25px 70px rgba(0,0,0,.25);
+}
+
+.form-shell::before{
+  content:"";
+
+  position:absolute;
+
+  top:0;
+  left:12%;
+  right:12%;
+
+  height:2px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      var(--emerald),
+      transparent
+    );
+
+  opacity:.7;
+}
+
+
+/* =========================
+   SECTION TITLES
+========================= */
+
+.form-section{
+  margin-bottom:34px;
+}
+
+.section-title{
+  display:flex;
+  align-items:center;
+  gap:12px;
+
+  margin-bottom:20px;
+
+  color:var(--text);
+
+  font-family:Georgia,serif;
+
+  font-size:21px;
+
+  font-weight:400;
+}
+
+.section-number{
+  width:27px;
+  height:27px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  border:1px solid var(--line);
+
+  border-radius:50%;
+
+  color:var(--emerald);
+
+  font-family:Arial,sans-serif;
+
+  font-size:11px;
+}
+
+
+/* =========================
+   INPUT GRID
+========================= */
+
+.grid{
   display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:1px;
-  background:rgba(255,255,255,0.08);
-  border:1px solid rgba(255,255,255,0.08);
-  max-width:700px;
-  margin:2.4rem auto 0;
-  border-radius:14px;
-  overflow:hidden;
-}
-.prize-strip div{
-  background:var(--black);
-  padding:1.2rem .8rem;
-  text-align:center;
-}
-.prize-strip .place{font-size:.7rem; letter-spacing:.1em; text-transform:uppercase; color:var(--grey);}
-.prize-strip .amount{
-  margin-top:.4rem;
-  font-family:'Orbitron',sans-serif;
-  font-size:1.3rem;
-  font-weight:700;
-  color:var(--neon);
+
+  grid-template-columns:
+    repeat(2,1fr);
+
+  gap:18px;
 }
 
-.info-grid{
-  max-width:900px;
-  margin:2.6rem auto 0;
-  padding:0 6vw;
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
-  gap:1rem;
+.field{
+  display:flex;
+  flex-direction:column;
 }
-.info-card{
-  background:var(--glass);
-  border:1px solid var(--glass-border);
-  border-radius:12px;
-  padding:1.2rem;
-  text-align:center;
-}
-.info-card .label{font-size:.65rem; letter-spacing:.1em; text-transform:uppercase; color:var(--grey);}
-.info-card .value{margin-top:.4rem; font-weight:600; color:var(--white); font-size:.95rem;}
 
-.bonus-note{
-  max-width:700px;
-  margin:2rem auto 0;
-  padding:1rem 1.4rem;
-  border:1px dashed var(--glass-border);
-  border-radius:12px;
-  text-align:center;
-  color:var(--grey);
-  font-size:.88rem;
+.field.full{
+  grid-column:
+    1 / -1;
 }
-.bonus-note strong{color:var(--neon);}
 
-form{
-  max-width:560px;
-  margin:4rem auto;
-  padding:0 6vw;
-}
-form h2{
-  font-size:1.4rem;
-  margin-bottom:1.6rem;
-  text-align:center;
-}
-.field{margin-bottom:1.2rem;}
-.field label{
-  display:block;
-  font-size:.75rem;
+label{
+  color:#a9c8bd;
+
+  font-size:11px;
+
   letter-spacing:.08em;
-  text-transform:uppercase;
-  color:var(--grey);
-  margin-bottom:.5rem;
+
+  margin-bottom:8px;
 }
-.field input, .field select{
+
+.required{
+  color:var(--emerald);
+}
+
+
+/* =========================
+   INPUTS
+========================= */
+
+input,
+select,
+textarea{
   width:100%;
-  padding:.85rem 1rem;
-  background:rgba(255,255,255,0.03);
-  border:1px solid rgba(255,255,255,0.15);
-  border-radius:10px;
-  color:var(--white);
-  font-family:'Inter',sans-serif;
-  font-size:.95rem;
-}
-.field input:focus, .field select:focus{
+
+  border:1px solid
+    rgba(22,242,163,.13);
+
+  border-radius:9px;
+
   outline:none;
-  border-color:var(--neon);
+
+  background:
+    rgba(14,23,19,.9);
+
+  color:var(--text);
+
+  padding:13px 14px;
+
+  font-family:Arial,sans-serif;
+
+  font-size:13px;
+
+  transition:
+    border-color .25s,
+    box-shadow .25s,
+    background .25s;
 }
-.player-block{
-  border:1px solid rgba(255,255,255,0.08);
-  border-radius:12px;
-  padding:1.2rem 1.2rem .2rem;
-  margin-bottom:1.2rem;
+
+input::placeholder,
+textarea::placeholder{
+  color:#4d6b60;
 }
-.player-block .player-title{
-  font-family:'Orbitron',sans-serif;
-  font-size:.85rem;
-  color:var(--neon);
-  letter-spacing:.05em;
-  margin-bottom:1rem;
+
+input:focus,
+select:focus,
+textarea:focus{
+  border-color:
+    rgba(22,242,163,.65);
+
+  background:#0c1511;
+
+  box-shadow:
+    0 0 0 3px
+    rgba(22,242,163,.06);
 }
-.payment-box{
-  border:1px solid var(--glass-border);
-  background:var(--glass);
-  border-radius:12px;
-  padding:1.4rem;
-  margin-bottom:1.2rem;
+
+select{
+  appearance:none;
+
+  -webkit-appearance:none;
+
+  cursor:pointer;
+}
+
+textarea{
+  min-height:105px;
+
+  resize:vertical;
+}
+
+
+/* =========================
+   FORMAT OPTIONS
+========================= */
+
+.format-options{
+  display:grid;
+
+  grid-template-columns:
+    repeat(3,1fr);
+
+  gap:12px;
+}
+
+.format-option{
+  position:relative;
+}
+
+.format-option input{
+  position:absolute;
+
+  opacity:0;
+
+  pointer-events:none;
+}
+
+.format-label{
+  display:block;
+
+  padding:17px 10px;
+
   text-align:center;
-}
-.payment-box .player-title{margin-bottom:.6rem;}
-.pay-text{color:var(--grey); font-size:.88rem; margin-bottom:1rem;}
-.qr-img{
-  width:160px;
-  height:160px;
-  object-fit:contain;
+
+  border:1px solid
+    rgba(22,242,163,.13);
+
   border-radius:10px;
-  background:#fff;
-  padding:8px;
+
+  background:
+    rgba(14,23,19,.7);
+
+  color:var(--mist);
+
+  cursor:pointer;
+
+  transition:.25s;
 }
-.pay-number{
-  margin-top:.8rem;
-  font-family:'Orbitron',sans-serif;
-  font-size:1.1rem;
-  letter-spacing:.08em;
-  color:var(--neon);
-  font-weight:700;
+
+.format-label strong{
+  display:block;
+
+  color:var(--text);
+
+  font-family:Georgia,serif;
+
+  font-size:17px;
+
+  font-weight:400;
+
+  margin-bottom:5px;
 }
-.two-col{display:grid; grid-template-columns:1fr 1fr; gap:1rem;}
-@media(max-width:480px){.two-col{grid-template-columns:1fr;}}
+
+.format-label small{
+  font-size:10px;
+
+  color:var(--muted);
+
+  letter-spacing:.06em;
+}
+
+.format-option input:checked
++ .format-label{
+  border-color:var(--emerald);
+
+  background:
+    rgba(22,242,163,.07);
+
+  box-shadow:
+    0 0 20px
+    rgba(22,242,163,.08);
+}
+
+.format-option input:checked
++ .format-label strong{
+  color:var(--emerald);
+}
+
+
+/* =========================
+   INFO BOX
+========================= */
+
+.info-box{
+  margin-top:18px;
+
+  padding:15px 17px;
+
+  border-left:
+    2px solid var(--emerald);
+
+  background:
+    rgba(22,242,163,.035);
+
+  color:var(--mist);
+
+  font-size:12px;
+
+  line-height:1.7;
+}
+
+
+/* =========================
+   CHECKBOX
+========================= */
+
+.agreement{
+  display:flex;
+
+  align-items:flex-start;
+
+  gap:11px;
+
+  margin-top:10px;
+
+  color:var(--mist);
+
+  font-size:12px;
+
+  line-height:1.6;
+
+  cursor:pointer;
+}
+
+.agreement input{
+  width:16px;
+  height:16px;
+
+  min-width:16px;
+
+  margin-top:2px;
+
+  accent-color:var(--emerald);
+}
+
+.agreement a{
+  color:var(--emerald);
+
+  text-decoration:none;
+}
+
+
+/* =========================
+   SUBMIT
+========================= */
+
+.submit-area{
+  padding-top:8px;
+
+  border-top:
+    1px solid rgba(22,242,163,.08);
+}
 
 .submit-btn{
   width:100%;
-  padding:1rem;
-  margin-top:1rem;
-  background:var(--neon);
-  color:var(--black);
-  border:none;
-  border-radius:100px;
-  font-family:'Orbitron',sans-serif;
-  font-size:.9rem;
-  letter-spacing:.12em;
-  text-transform:uppercase;
-  font-weight:700;
-  cursor:pointer;
-  box-shadow:0 0 25px rgba(46,230,166,.35);
-  transition:transform .2s, box-shadow .2s;
-}
-.submit-btn:hover{transform:translateY(-2px); box-shadow:0 0 35px rgba(46,230,166,.55);}
-.submit-btn:disabled{opacity:.6; cursor:default;}
 
-.form-note{
-  margin-top:1.2rem;
-  font-size:.8rem;
-  color:var(--grey);
-  text-align:center;
+  border:1px solid var(--emerald);
+
+  border-radius:999px;
+
+  padding:15px 20px;
+
+  background:
+    rgba(22,242,163,.06);
+
+  color:var(--emerald);
+
+  font-size:11px;
+
+  font-weight:600;
+
+  letter-spacing:.18em;
+
+  text-transform:uppercase;
+
+  cursor:pointer;
+
+  transition:
+    background .25s,
+    color .25s,
+    box-shadow .25s,
+    transform .25s;
 }
-.success-box{
+
+.submit-btn:hover{
+  background:var(--emerald);
+
+  color:#060907;
+
+  box-shadow:
+    0 0 30px
+    rgba(22,242,163,.28);
+
+  transform:translateY(-2px);
+}
+
+.submit-btn:active{
+  transform:translateY(0);
+}
+
+
+/* =========================
+   SUCCESS
+========================= */
+
+.success{
   display:none;
-  max-width:560px;
-  margin:4rem auto;
-  padding:2.4rem;
+
   text-align:center;
-  border:1px solid var(--glass-border);
-  border-radius:16px;
-  background:var(--glass);
+
+  padding:45px 20px;
 }
-.success-box h2{color:var(--neon); margin-bottom:.8rem;}
-.success-box p{color:var(--grey);}
+
+.success-icon{
+  width:65px;
+  height:65px;
+
+  margin:0 auto 22px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  border:1px solid var(--emerald);
+
+  border-radius:50%;
+
+  color:var(--emerald);
+
+  font-size:27px;
+
+  box-shadow:
+    0 0 30px
+    rgba(22,242,163,.2);
+}
+
+.success h2{
+  font-family:Georgia,serif;
+
+  font-size:30px;
+
+  font-weight:400;
+
+  margin-bottom:12px;
+}
+
+.success p{
+  max-width:540px;
+
+  margin:auto;
+
+  color:var(--mist);
+
+  font-size:14px;
+
+  line-height:1.8;
+}
+
+.success-note{
+  margin-top:25px;
+
+  padding:14px;
+
+  border:1px solid var(--line);
+
+  border-radius:9px;
+
+  color:var(--muted);
+
+  font-size:11px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
 
 footer{
-  padding:2rem 6vw;
-  border-top:1px solid rgba(255,255,255,0.08);
   text-align:center;
-  font-size:.75rem;
-  color:var(--grey);
-  letter-spacing:.05em;
-  text-transform:uppercase;
+
+  margin-top:35px;
+
+  color:#3f5c51;
+
+  font-size:10px;
+
+  letter-spacing:.1em;
 }
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:650px){
+
+  header{
+    padding:14px 18px;
+  }
+
+  .brand-name{
+    font-size:14px;
+  }
+
+  main{
+    padding:
+      50px 15px
+      75px;
+  }
+
+  .form-shell{
+    padding:22px 17px;
+  }
+
+  .grid{
+    grid-template-columns:1fr;
+  }
+
+  .field.full{
+    grid-column:auto;
+  }
+
+  .format-options{
+    grid-template-columns:1fr;
+  }
+
+  .hero{
+    margin-bottom:32px;
+  }
+
+  .hero h1{
+    font-size:34px;
+  }
+
+  .hero p{
+    font-size:13px;
+  }
+}
+
 </style>
 </head>
+
+
 <body>
 
-<nav>
-  <img src="logo.png" alt="Fantovex logo">
-  <span>FANTO<em>VEX</em></span>
-  <a href="index.html" class="back">← Back to site</a>
-</nav>
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header>
+
+  <a href="index.html"
+     class="brand"
+     aria-label="Fantovex Home">
+
+    <div class="brand-mark">
+      <span>F</span>
+    </div>
+
+    <span class="brand-name">
+      FANTOVEX
+    </span>
+
+  </a>
+
+
+  <a href="index.html"
+     class="back-link">
+
+    ← Back
+
+  </a>
+
+</header>
+
+
+
+<main>
+
+
+<!-- =========================
+     HERO
+========================= -->
 
 <section class="hero">
-  <div class="eyebrow">Play Beyond Limits</div>
-  <h1>FREE FIRE<br><span>SQUAD TOURNAMENT</span></h1>
-  <p>Gather your squad. Prove your skills. Claim victory! Register below to lock in your spot.</p>
 
-  <div class="prize-strip">
-    <div><div class="place">1st Place</div><div class="amount">₹600</div></div>
-    <div><div class="place">2nd Place</div><div class="amount">₹250</div></div>
-    <div><div class="place">3rd Place</div><div class="amount">₹150</div></div>
+  <div class="eyebrow">
+    Fantovex Competitive Arena
   </div>
 
-  <div class="info-grid">
-    <div class="info-card"><div class="label">Entry Fee</div><div class="value">₹50 / Player</div></div>
-    <div class="info-card"><div class="label">Date</div><div class="value">9 August (Sun)</div></div>
-    <div class="info-card"><div class="label">Time</div><div class="value">Check Discord</div></div>
-    <div class="info-card"><div class="label">Mode</div><div class="value">Squad</div></div>
-    <div class="info-card"><div class="label">Server</div><div class="value">India</div></div>
-  </div>
+  <h1>
+    Tournament Registration
+  </h1>
 
-  <div class="bonus-note">
-    <strong>Bonus Rewards:</strong> If registrations exceed expectations, we may increase the prize pool and announce additional rewards like ₹10 per confirmed kill before the tournament!
-  </div>
-  <div class="bonus-note">
-    <strong>Room ID & Password</strong> will be announced only on our official Discord & Telegram.
-  </div>
+  <p>
+    Enter your details below to register your interest
+    in an upcoming Fantovex tournament. Select your
+    preferred format and make sure your information is
+    accurate before submitting.
+  </p>
+
 </section>
 
-<form id="regForm" action="https://formspree.io/f/mgawedok" method="POST">
-  <h2>Squad Registration</h2>
+
+
+<!-- =========================
+     FORM
+========================= -->
+
+<div class="form-shell">
+
+
+<form id="registrationForm">
+
+
+<!-- =========================
+     TOURNAMENT
+========================= -->
+
+<section class="form-section">
+
+  <h2 class="section-title">
+
+    <span class="section-number">
+      01
+    </span>
+
+    Tournament Details
+
+  </h2>
+
+
+  <div class="grid">
+
+
+    <div class="field full">
+
+      <label>
+        Select Game
+        <span class="required">*</span>
+      </label>
+
+      <select
+        id="game"
+        name="game"
+        required>
+
+        <option value="">
+          Choose a game
+        </option>
+
+        <option value="Free Fire">
+          Free Fire
+        </option>
+
+        <option value="BGMI">
+          BGMI
+        </option>
+
+        <option value="Call of Duty Mobile">
+          Call of Duty Mobile
+        </option>
+
+      </select>
+
+    </div>
+
+
+    <div class="field full">
+
+      <label>
+        Select Format
+        <span class="required">*</span>
+      </label>
+
+
+      <div class="format-options">
+
+
+        <div class="format-option">
+
+          <input
+            type="radio"
+            id="solo"
+            name="format"
+            value="Solo"
+            required>
+
+          <label
+            for="solo"
+            class="format-label">
+
+            <strong>
+              Solo
+            </strong>
+
+            <small>
+              INDIVIDUAL
+            </small>
+
+          </label>
+
+        </div>
+
+
+        <div class="format-option">
+
+          <input
+            type="radio"
+            id="duo"
+            name="format"
+            value="Duo">
+
+          <label
+            for="duo"
+            class="format-label">
+
+            <strong>
+              Duo
+            </strong>
+
+            <small>
+              2 PLAYERS
+            </small>
+
+          </label>
+
+        </div>
+
+
+        <div class="format-option">
+
+          <input
+            type="radio"
+            id="squad"
+            name="format"
+            value="Squad">
+
+          <label
+            for="squad"
+            class="format-label">
+
+            <strong>
+              Squad
+            </strong>
+
+            <small>
+              TEAM FORMAT
+            </small>
+
+          </label>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+
+  </div>
+
+
+  <div class="info-box">
+
+    Tournament dates, schedules and final event
+    instructions will be communicated through the
+    official Fantovex channels after registration.
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     PLAYER
+========================= -->
+
+<section class="form-section">
+
+  <h2 class="section-title">
+
+    <span class="section-number">
+      02
+    </span>
+
+    Player Details
+
+  </h2>
+
+
+  <div class="grid">
+
+
+    <div class="field">
+
+      <label for="fullName">
+        Full Name
+        <span class="required">*</span>
+      </label>
+
+      <input
+        type="text"
+        id="fullName"
+        name="fullName"
+        placeholder="Enter your name"
+        autocomplete="name"
+        required>
+
+    </div>
+
+
+    <div class="field">
+
+      <label for="ign">
+        In-Game Name
+        <span class="required">*</span>
+      </label>
+
+      <input
+        type="text"
+        id="ign"
+        name="ign"
+        placeholder="Your gaming name"
+        required>
+
+    </div>
+
+
+    <div class="field">
+
+      <label for="playerId">
+        Player / UID
+        <span class="required">*</span>
+      </label>
+
+      <input
+        type="text"
+        id="playerId"
+        name="playerId"
+        placeholder="Enter your game UID"
+        required>
+
+    </div>
+
+
+    <div class="field">
+
+      <label for="age">
+        Age
+        <span class="required">*</span>
+      </label>
+
+      <input
+        type="number"
+        id="age"
+        name="age"
+        min="13"
+        max="100"
+        placeholder="Your age"
+        required>
+
+    </div>
+
+
+    <div class="field full">
+
+      <label for="teamName">
+        Team Name
+      </label>
+
+      <input
+        type="text"
+        id="teamName"
+        name="teamName"
+        placeholder="Leave blank if registering Solo">
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section class="form-section">
+
+  <h2 class="section-title">
+
+    <span class="section-number">
+      03
+    </span>
+
+    Contact Details
+
+  </h2>
+
+
+  <div class="grid">
+
+
+    <div class="field">
+
+      <label for="email">
+        Email Address
+        <span class="required">*</span>
+      </label>
+
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="you@example.com"
+        autocomplete="email"
+        required>
+
+    </div>
+
+
+    <div class="field">
+
+      <label for="discord">
+        Discord Username
+      </label>
+
+      <input
+        type="text"
+        id="discord"
+        name="discord"
+        placeholder="username">
+
+    </div>
+
+
+    <div class="field">
+
+      <label for="telegram">
+        Telegram Username
+      </label>
+
+      <input
+        type="text"
+        id="telegram"
+        name="telegram"
+        placeholder="@username">
+
+    </div>
+
+
+    <div class="field">
+
+      <label for="contact">
+        Contact Number
+      </label>
+
+      <input
+        type="tel"
+        id="contact"
+        name="contact"
+        placeholder="Optional">
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     MESSAGE
+========================= -->
+
+<section class="form-section">
+
+  <h2 class="section-title">
+
+    <span class="section-number">
+      04
+    </span>
+
+    Additional Information
+
+  </h2>
+
 
   <div class="field">
-    <label for="teamName">Team / Squad Name</label>
-    <input type="text" id="teamName" name="Team Name" required>
+
+    <label for="message">
+      Message / Notes
+    </label>
+
+    <textarea
+      id="message"
+      name="message"
+      placeholder="Anything the Fantovex team should know?"></textarea>
+
   </div>
 
-  <div class="player-block">
-    <div class="player-title">Captain</div>
-    <div class="two-col">
-      <div class="field"><label>In-Game Name</label><input type="text" name="Captain IGN" required></div>
-      <div class="field"><label>UID</label><input type="text" name="Captain UID" required></div>
-    </div>
-    <div class="field"><label>WhatsApp Number (Optional)</label><input type="tel" name="Captain WhatsApp"></div>
-    <div class="field"><label>Telegram Username</label><input type="text" name="Captain Telegram" required></div>
-  </div>
+</section>
 
-  <div class="player-block">
-    <div class="player-title">Player 2</div>
-    <div class="two-col">
-      <div class="field"><label>In-Game Name</label><input type="text" name="Player 2 IGN" required></div>
-      <div class="field"><label>UID</label><input type="text" name="Player 2 UID" required></div>
-    </div>
-  </div>
 
-  <div class="player-block">
-    <div class="player-title">Player 3</div>
-    <div class="two-col">
-      <div class="field"><label>In-Game Name</label><input type="text" name="Player 3 IGN" required></div>
-      <div class="field"><label>UID</label><input type="text" name="Player 3 UID" required></div>
-    </div>
-  </div>
 
-  <div class="player-block">
-    <div class="player-title">Player 4</div>
-    <div class="two-col">
-      <div class="field"><label>In-Game Name</label><input type="text" name="Player 4 IGN" required></div>
-      <div class="field"><label>UID</label><input type="text" name="Player 4 UID" required></div>
-    </div>
-  </div>
+<!-- =========================
+     AGREEMENT
+========================= -->
 
-  <div class="player-block">
-    <div class="player-title">Substitute (Optional)</div>
-    <div class="two-col">
-      <div class="field"><label>In-Game Name</label><input type="text" name="Substitute IGN"></div>
-      <div class="field"><label>UID</label><input type="text" name="Substitute UID"></div>
-    </div>
-  </div>
+<section class="form-section">
 
-  <div class="field">
-    <label for="discord">Discord Username</label>
-    <input type="text" id="discord" name="Discord Username" required>
-  </div>
+  <label class="agreement">
 
-  <div class="payment-box">
-    <div class="player-title">Payment</div>
-    <p class="pay-text">Pay ₹50 per player (total for your squad) via PhonePe to the number below, then upload your screenshot.</p>
-    <img src="payment-qr.jpg" alt="PhonePe payment QR code" class="qr-img">
-    <div class="pay-number">9508658469</div>
-  </div>
+    <input
+      type="checkbox"
+      id="rules"
+      name="rules"
+      required>
 
-  <div class="field">
-    <label for="payProof">Payment Proof Screenshot (Entry Fee ₹50/Player)</label>
-    <input type="file" id="payProof" name="Payment Screenshot" accept="image/*" required>
-  </div>
+    <span>
+      I confirm that the information I have provided
+      is accurate and I agree to follow the official
+      Fantovex tournament rules and instructions.
+    </span>
 
-  <button type="submit" class="submit-btn" id="submitBtn">Register Now</button>
-  <p class="form-note">Pay via PhonePe to 9508658469, then attach the screenshot above.</p>
-</form>
+  </label>
 
-<div class="success-box" id="successBox">
-  <h2>You're In! 🎮</h2>
-  <p>Your squad has been registered. Check Discord for match timing and further updates.</p>
+</section>
+
+
+
+<!-- =========================
+     SUBMIT
+========================= -->
+
+<div class="submit-area">
+
+  <button
+    type="submit"
+    class="submit-btn">
+
+    Submit Registration
+
+  </button>
+
 </div>
 
-<footer>© 2026 Fantovex Esports — Play Beyond Limits</footer>
+
+</form>
+
+
+
+<!-- =========================
+     SUCCESS
+========================= -->
+
+<div
+  class="success"
+  id="success">
+
+  <div class="success-icon">
+    ✓
+  </div>
+
+  <h2>
+    Registration Received
+  </h2>
+
+  <p>
+    Your registration details have been prepared
+    successfully. Keep an eye on the official Fantovex
+    channels for tournament updates and instructions.
+  </p>
+
+  <div class="success-note">
+    Fantovex — Play Beyond Limits
+  </div>
+
+</div>
+
+
+</div>
+
+
+
+<footer>
+
+  © 2026 Fantovex Esports · Play Beyond Limits
+
+</footer>
+
+
+</main>
+
+
 
 <script>
-const form = document.getElementById('regForm');
-const btn = document.getElementById('submitBtn');
-form.addEventListener('submit', async (e) => {
-  e.preventDefault();
-  btn.disabled = true;
-  btn.textContent = 'Submitting...';
-  try{
-    const res = await fetch(form.action, {
-      method: 'POST',
-      body: new FormData(form),
-      headers: { 'Accept': 'application/json' }
-    });
-    if(res.ok){
-      form.style.display = 'none';
-      document.getElementById('successBox').style.display = 'block';
-    } else {
-      alert('Something went wrong. Please try again.');
-      btn.disabled = false;
-      btn.textContent = 'Register Now';
-    }
-  } catch(err){
-    alert('Network error. Please check your connection and try again.');
-    btn.disabled = false;
-    btn.textContent = 'Register Now';
-  }
+
+const form =
+  document.getElementById("registrationForm");
+
+const success =
+  document.getElementById("success");
+
+
+form.addEventListener("submit", function(event){
+
+  event.preventDefault();
+
+
+  /*
+   * GitHub Pages is static hosting.
+   *
+   * This currently shows a confirmation screen
+   * instead of pretending that the data was sent
+   * to a server.
+   *
+   * We can connect this form to your Google Form
+   * afterward.
+   */
+
+
+  form.style.display = "none";
+
+  success.style.display = "block";
+
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+
 });
+
 </script>
+
 
 </body>
 </html>
